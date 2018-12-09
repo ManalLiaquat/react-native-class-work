@@ -1,41 +1,39 @@
 import { createStackNavigator, createAppContainer, createDrawerNavigator, createMaterialTopTabNavigator } from 'react-navigation';
-import HomeScreen from '../screen/Home/';
-import DashboardScreen from '../screen/Dashboard/';
-import LoginScreen from '../screen/Login/';
+import {screens} from "../Screens/"
 
 const StackNavigation = createStackNavigator({
   Home: {
-    screen: HomeScreen
+    screen: screens.HomeScreen
   },
   Dashboard: {
-    screen: DashboardScreen
+    screen: screens.DashboardScreen
   },
   Login: {
-    screen: LoginScreen
+    screen: screens.LoginScreen
   }
 });
 
 const DrawerStack = createDrawerNavigator({
   Home: {
-    screen: HomeScreen
+    screen: screens.HomeScreen
   },
   Dashboard: {
-    screen: DashboardScreen
+    screen: screens.DashboardScreen
   },
   Login: {
-    screen: LoginScreen
+    screen: screens.LoginScreen
   }
 });
 
 const TabStack = createMaterialTopTabNavigator({
   Home: {
-    screen: DrawerStack
+    screen: screens.DrawerStack
   },
   Dashboard: {
-    screen: DashboardScreen
+    screen: screens.DashboardScreen
   },
   Login: {
-    screen: LoginScreen
+    screen: screens.LoginScreen
   }
 });
 
