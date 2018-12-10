@@ -1,5 +1,10 @@
-import { createStackNavigator, createAppContainer, createDrawerNavigator, createMaterialTopTabNavigator } from 'react-navigation';
-import {screens} from "../Screens/"
+import {
+  createStackNavigator,
+  createAppContainer,
+  createDrawerNavigator,
+  createMaterialTopTabNavigator
+} from "react-navigation";
+import { screens } from "../Screens/";
 
 const StackNavigation = createStackNavigator({
   Home: {
@@ -10,6 +15,9 @@ const StackNavigation = createStackNavigator({
   },
   Login: {
     screen: screens.LoginScreen
+  },
+  CarGame: {
+    screen: screens.CarGameScreen
   }
 });
 
@@ -22,6 +30,9 @@ const DrawerStack = createDrawerNavigator({
   },
   Login: {
     screen: screens.LoginScreen
+  },
+  CarGame: {
+    screen: screens.CarGameScreen
   }
 });
 
@@ -34,9 +45,11 @@ const TabStack = createMaterialTopTabNavigator({
   },
   Login: {
     screen: screens.LoginScreen
+  },
+  CarGame: {
+    screen: screens.CarGameScreen
   }
 });
-
 
 const Navigation = createAppContainer(TabStack);
 

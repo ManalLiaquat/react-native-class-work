@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { Button } from 'react-native-elements';
-import { StackActions, NavigationActions } from 'react-navigation';
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+import { Button } from "react-native-elements";
+import { StackActions, NavigationActions } from "react-navigation";
 
 class Login extends Component {
   constructor(props) {
@@ -11,23 +11,23 @@ class Login extends Component {
     const resetAction = StackActions.reset({
       index: 1,
       actions: [
-        NavigationActions.navigate({ routeName: 'Home' }),
-        NavigationActions.navigate({ routeName: 'Dashboard' }),
+        NavigationActions.navigate({ routeName: "Home" }),
+        NavigationActions.navigate({ routeName: "Dashboard" })
       ]
-    })
-    this.props.navigation.dispatch(resetAction)
+    });
+    this.props.navigation.dispatch(resetAction);
   }
   render() {
     return (
-      <View >
+      <View>
         <Text>This is Login</Text>
+        <Button title="Change Navigation" onPress={() => this.naviagte()} />
         <Button
-          title="Change Navigation"
-          onPress={() => this.naviagte()}
+          title="Open Car Game"
+          onPress={() => this.props.navigation.naviagte("CarGame")}
         />
       </View>
-    )
+    );
   }
-
 }
 export default Login;
